@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    
+
+<html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	
+    indent-rainbow - Visual Studio Marketplace
+
+</title>
+    <meta name="description" content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;Makes&#32;indentation&#32;easier&#32;to&#32;read" /><meta name="keywords" content="" /><meta property="og:title" content="indent-rainbow&#32;-&#32;Visual&#32;Studio&#32;Marketplace" /><meta property="og:type" content="website" /><meta property="og:url" content="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" /><meta property="og:image" content="https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.Icons.Default" /><meta property="og:description" content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;Makes&#32;indentation&#32;easier&#32;to&#32;read" /><meta property="twitter:card" content="summary" /><meta property="twitter:site" content="@Code" /><link rel="canonical" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" />
+<meta http-equiv="X-UA-Compatible" content="IE=11;&#32;IE=10;&#32;IE=9;&#32;IE=8" />
+    <link rel="SHORTCUT ICON" href="/favicon.ico" />
+
+    
+    <link data-bundlelength="278460" data-bundlename="commoncss" data-highcontrast="https://cdn.vsassets.io/v/M144_20181213.9/_cssbundles/HighContrast/vss-bundle-commoncss-v7-VnofWHKLZcxtrff9F7qPqaEPgT34xbQK4ULBfsb8w=" data-includedstyles="Gallery3rdParty;Gallery;fabric" href="https://cdn.vsassets.io/v/M144_20181213.9/_cssbundles/Default/vss-bundle-commoncss-vqNkFzobclNq1RHT14HxHk9zegqze0h_01EyJPn1K7-c=" rel="stylesheet" />
+<link data-bundlelength="162652" data-bundlename="viewcss" data-highcontrast="https://cdn.vsassets.io/v/M144_20181213.9/_cssbundles/HighContrast/vss-bundle-viewcss-vwoYKXOdESV0H4Zewu33LgHfyYol5aaR3Na239qOWIh4=" data-includedstyles="jQueryUI-Modified;QnA/AskQuestionDialog;Shared/ReadMoreText;Shared/LinkAsButton;QnA/ReadMoreContent;QnA/QnAContainer;QnA/AnswerContent;Shared/FlagControl;QnA/QnAItemRow;ItemDetails/QnAAndRnRContainer;ItemDetails/ItemDetailsMarkdown;Shared/Carousel;ItemDetails/ScreenshotsCarousel;ItemDetails/MetadataListContainer;ItemDetails/CapabilitiesContainer;ItemDetails/ResourcesContainer;ItemDetails/MoreInfoContainer;ItemDetails/GithubDetails;ItemDetails/ItemDetails;Acquisition/Steps/BuyCustomizationEditControl;ItemDetails/NewPricingCalculator;RnR/ReviewReply;RnR/RnRRow;RnR/ReviewDialog;RnR/RnRContainer;ItemDetails/ItemDetailsTabContainer;ItemDetails/OneClickInstallDialog;Shared/MarketplaceCertifiedBadge;Shared/OptInBar;VSS.Controls" href="https://cdn.vsassets.io/v/M144_20181213.9/_cssbundles/Default/vss-bundle-viewcss-v9xnVJa4zVrPGvzswMy1h7ApHZn6XIayPhAWBGGGnRXg=" rel="stylesheet" />
+<script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('startLoadBundleOuter-basejs'); }</script>
+<script data-bundlelength="122095" data-bundlename="basejs" nonce="g1jkVm74xmvFdKMHV1KkfQ==" src="https://cdn.vsassets.io/bundles/vss-bundle-basejs-vHEZmoQW5VnU7gd0ksjL7j5fKkFB3cE7fn6EeL008n7I=" type="text/javascript"></script>
+<script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('endLoadBundleOuter-basejs'); }</script>
+
+
+    
+    <!-- JSLL script -->
+    
+    <!-- End JSLL script -->
+
+</head>
+<body class="platform gallery gallery-page-item-details">    
+    
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WT9XBK"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script type="text/javascript"  nonce="g1jkVm74xmvFdKMHV1KkfQ==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WT9XBK');</script>
+        <!-- End Google Tag Manager -->
+    
+    <!-- GreenId -->
+    <iframe  style="color:rgb(0,0,0);  float:left; position:absolute; top:-200px; left:-200px; border:0px" src="https://fpt.microsoft.com/tags?session_id=fee0a916-869d-4b46-bcf0-9ec139181673" height=100  width=100></iframe>
+    <!-- End GreenId -->
+    
+    <script type="text/javascript" nonce="g1jkVm74xmvFdKMHV1KkfQ=="> var __vssPageContext = {"webContext":{"host":{"id":"2663b13f-50e3-a655-a159-22f6f4725fab","name":"TEAM FOUNDATION","uri":"https://marketplace.visualstudio.com/","relativeUri":"/","hostType":"deployment","scheme":"https","authority":"marketplace.visualstudio.com"}},"moduleLoaderConfig":{"baseUrl":"https://cdn.vsassets.io/v/M144_20181213.9/_scripts/TFS/min/","paths":{"VSSPreview/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","Gallery/Scripts/Gallery/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","ContentRendering/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","VSS/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","Engagement/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","Charts/Resources":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","highcharts":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts.v6.1.4","highcharts.more":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-more.v6.1.4","highcharts.accessibility":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-accessibility.v6.1.4","highcharts.funnel":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-funnel.v6.1.4","highcharts.heatmap":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-heatmap.v6.1.4"},"map":{"*":{"office-ui-fabric-react/lib":"OfficeFabric"}},"contributionPaths":{"VSS":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/VSS","pathType":"default"},"VSS/Resources":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","pathType":"resource"},"q":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/q","pathType":"default"},"knockout":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/knockout","pathType":"default"},"mousetrap":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/mousetrap","pathType":"default"},"mustache":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/mustache","pathType":"default"},"react":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/react.15.3","pathType":"default"},"react-dom":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/react-dom.15.3","pathType":"default"},"react-transition-group":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/react-transition-group.15.3","pathType":"default"},"jQueryUI":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/jQueryUI","pathType":"default"},"jquery":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/jquery","pathType":"default"},"OfficeFabric":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/OfficeFabric","pathType":"default"},"tslib":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/tslib","pathType":"default"},"@uifabric":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/@uifabric","pathType":"default"},"VSSUI":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/VSSUI","pathType":"default"},"ContentRendering":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/ContentRendering","pathType":"default"},"ContentRendering/Resources":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","pathType":"resource"},"Charts":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/Charts","pathType":"default"},"Charts/Resources":{"value":"/_static/tfs/M144_20181213.9/_scripts/TFS/min/en-GB","pathType":"resource"},"highcharts":{"value":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts.v6.1.4","pathType":"thirdParty"},"highcharts.more":{"value":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-more.v6.1.4","pathType":"thirdParty"},"highcharts.accessibility":{"value":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-accessibility.v6.1.4","pathType":"thirdParty"},"highcharts.funnel":{"value":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-funnel.v6.1.4","pathType":"thirdParty"},"highcharts.heatmap":{"value":"https://cdn.vsassets.io/3rdParty/_scripts/highcharts-heatmap.v6.1.4","pathType":"thirdParty"}},"shim":{"jquery":{"deps":[],"exports":"jQuery"}},"waitSeconds":30},"coreReferences":{"stylesheets":[{"url":"/_static/tfs/M144_20181213.9/_cssbundles/Default/vss-bundle-ext-core-css-vZdmbBjhQyWI6GuC1DnkXhWhei0ZMTicreCmtcwaf338=","highContrastUrl":null,"isCoreStylesheet":true}],"scripts":[{"identifier":"JQuery","url":"https://cdn.vsassets.io/3rdParty/_scripts/jquery-2.1.1.min.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true},{"identifier":"JQueryXDomain","url":"https://cdn.vsassets.io/3rdParty/_scripts/jquery.xdomainrequest.min.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true},{"identifier":"Promise","url":"https://cdn.vsassets.io/v/M144_20181213.9/_scripts/TFS/min/promise.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true},{"identifier":"LoaderFixes","url":"https://cdn.vsassets.io/v/M144_20181213.9/_scripts/TFS/pre-loader-shim.min.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":false},{"identifier":"AMDLoader","url":"https://cdn.vsassets.io/3rdParty/_scripts/require.min.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true},{"identifier":"LoaderFixes","url":"https://cdn.vsassets.io/v/M144_20181213.9/_scripts/TFS/post-loader-shim.min.js","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":false}],"coreScriptsBundle":{"identifier":"CoreBundle","url":"/_public/_Bundling/Content?bundle=vss-bundle-basejs-vHEZmoQW5VnU7gd0ksjL7j5fKkFB3cE7fn6EeL008n7I=","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true},"extensionCoreReferences":{"identifier":"CoreBundle","url":"https://cdn.vsassets.io/bundles/vss-bundle-ext-core-v1Z0dAnrSg07_lrOR_9DKvRysS36AkOicBdwYQOR9s3g=","fallbackUrl":null,"fallbackCondition":null,"isCoreModule":true}},"webAccessConfiguration":{"isHosted":true,"paths":{"rootPath":"/","staticContentRootPath":"/","staticContentVersion":"M144_20181213.9","resourcesPath":"https://cdn.vsassets.io/v/M144_20181213.9/_content/","staticRootTfs":"https://cdn.vsassets.io/v/M144_20181213.9/","cdnFallbackStaticRootTfs":"/_static/tfs/M144_20181213.9/","staticRoot3rdParty":"https://cdn.vsassets.io/3rdParty/"},"api":{"webApiVersion":"1","areaPrefix":"_","controllerPrefix":"_"},"mailSettings":{"enabled":false}},"microsoftAjaxConfig":{"cultureInfo":{"name":"en-GB","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"£","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"0001-01-01T00:00:00","MaxSupportedDateTime":"9999-12-31T23:59:59.9999999","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dd MMMM yyyy HH:mm:ss","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy'-'MM'-'dd'T'HH':'mm':'ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy'-'MM'-'dd HH':'mm':'ss'Z'","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"numberShortForm":{"QuantitySymbols":["K","M","B"],"NumberGroupSize":1000,"ThousandSymbol":"K"},"eras":null}},"timeZonesConfiguration":{},"featureAvailability":{"featureStates":{"VisualStudio.Services.Contribution.EnableOnPremUnsecureBrowsers":false,"VisualStudio.Service.WebPlatform.ClientErrorReporting":true,"Microsoft.VisualStudio.Services.Gallery.Client.UseCdnAssetUri":false,"VisualStudio.Services.WebAccess.SubresourceIntegrity":false,"VisualStudio.Services.IdentityPicker.ReactProfileCard":true,"Microsoft.VisualStudio.Services.Gallery.PublisherReply":true,"Microsoft.VisualStudio.Services.Gallery.ShowVSItemLink":false,"Microsoft.VisualStudio.Services.Gallery.ShowLargeThumbnailAsBrandingIcon":false,"Microsoft.VisualStudio.Services.Gallery.AllowNewAccountAPI":false,"Microsoft.VisualStudio.Services.Gallery.Publisher360.LogGetStartedCount":true,"Microsoft.VisualStudio.Services.Gallery.ShowQnA":true,"Microsoft.VisualStudio.Services.Gallery.EnableQnABypass":true,"Microsoft.VisualStudio.Services.Gallery.EnableQnABypassForVSTS":true,"Microsoft.VisualStudio.Services.Gallery.PrivacyPage":true,"Microsoft.VisualStudio.Services.Gallery.EnableByolForMarketplace":true,"Microsoft.VisualStudio.Services.Gallery.HideCalculatorForNDepend":true,"Microsoft.VisualStudio.Services.Gallery.RememberAccountSelection":true,"Microsoft.VisualStudio.Services.Gallery.Publisher360.EnableReportsLinkForVSCode":false,"Microsoft.VisualStudio.Services.Gallery.Publisher360.EnableReportsLinkForVSIde":true,"Microsoft.VisualStudio.Services.Gallery.EnableNewAcquisitionExperienceForFreeExtensions":true,"Microsoft.VisualStudio.Services.Gallery.EnableNewTokenAcquisitionExperience":false,"Microsoft.VisualStudio.Services.Gallery.EnableNewTokenAcquisitionExperienceForOffers":true,"Microsoft.VisualStudio.Services.Gallery.EnableNewTokenAcquisitionExperienceForTestManager":false,"Microsoft.VisualStudio.Services.Gallery.SeparateUpdateAndInstalls":true,"Microsoft.VisualStudio.Services.Gallery.EnablePublisherProfilePage":true,"Microsoft.VisualStudio.Services.Gallery.EnableCertifiedPublisherUIChanges":false,"Microsoft.VisualStudio.Services.Gallery.RatingReview":true,"Microsoft.VisualStudio.Services.Gallery.EnableQueriesBasedOnHiddenFlags":true,"Microsoft.VisualStudio.Services.Gallery.EnableStickyBannerOnDetailsPage":true,"VisualStudio.Services.WebPlatform.UseNewBranding":true}},"appInsightsConfiguration":{"enabled":false,"instrumentationKey":"00000000-0000-0000-0000-000000000000","insightsScriptUrl":null},"diagnostics":{"sessionId":"fee0a916-869d-4b46-bcf0-9ec139181673","activityId":"fee0a916-869d-4b46-bcf0-9ec139181673","bundlingEnabled":true,"cdnAvailable":true,"cdnEnabled":true,"webPlatformVersion":"M144","serviceVersion":"Dev17.M144.2 (build: VSO.Release.CI_M144_20181214.10)"},"navigation":{"topMostLevel":"deployment","area":"","currentController":"Gallery","currentAction":"Details","commandName":"Gallery.Details","routeId":"LegacyWebAccessRoute","routeValues":{"controller":"Gallery","action":"Details","serviceHost":"2663b13f-50e3-a655-a159-22f6f4725fab (TEAM FOUNDATION)"}},"globalization":{"explicitTheme":"","theme":"Default","culture":"en-GB","timezoneOffset":0,"timeZoneId":"UTC"},"serviceInstanceId":"00000029-0000-8888-8000-000000000000","hubsContext":{},"serviceLocations":{"locations":{"951917ac-a960-4999-8464-e3f0aa25b381":{"Application":"https://app.vssps.visualstudio.com/","Deployment":"https://app.vssps.visualstudio.com/"}}}};</script><script type="text/javascript" nonce="g1jkVm74xmvFdKMHV1KkfQ=="> var __cultureInfo = __vssPageContext.microsoftAjaxConfig.cultureInfo;</script>
+<script type="text/javascript" nonce="g1jkVm74xmvFdKMHV1KkfQ=="> (function(){
+var unloadStarted = false;
+function onRequireError(e) {
+    var msg = 'There was an error loading a required file. Would you like to reload the page to try to load again?';
+    function reload(prompted) {
+        document.cookie = 'TFS-CDN=disabled;max-age=28800;path=/;secure';
+        document.cookie = 'TFS-CDNTRACE=report-'+prompted+'-'+(e.requireType === 'requirenotloaded' ? 'require' : encodeURIComponent(JSON.stringify(e.requireModules)))+';path=/;secure';
+        document.location.reload(true);
+    }
+    if (!e || !e.requireType || (e.requireType !== 'scripterror' && e.requireType !== 'requirenotloaded')) {
+        throw e;
+    }
+    if (unloadStarted) {
+        return;
+    }
+    if (!window.requiredModulesLoaded) {
+        reload(false);
+    }
+    else if (window.require && require.defined('VSS/Controls/Dialogs')) {
+        require(['VSS/Controls/Dialogs'], function(d) {
+            d.showMessageDialog(msg, { title: 'Network Error', buttons: [d.MessageDialog.buttons.yes, d.MessageDialog.buttons.no] }).then(function() { reload(true) });
+        });
+    }
+    else {
+        if (confirm(msg)) {
+            reload(true);
+        }
+    }
+}
+window.addEventListener('beforeunload', function() {
+    unloadStarted = true;
+});
+if (window.requirejs) {
+    requirejs.onError = onRequireError;
+}
+else {
+    onRequireError({requireType:'requirenotloaded'});
+}
+})();require.config(__vssPageContext.moduleLoaderConfig);</script>
+
+    <input name="__RequestVerificationToken" type="hidden" value="eWlSg-JbGrOgxrP4oyS1mERQuYfnszSHnAaI6wh5sonGlWCodybQ-tZTczp8w4IZuA0r0gGnqvSK-GXOo0poYZAvGIeZaLdxWJZLqf2ks0M1" />  
+    <script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('startLoadBundleOuter-common'); }</script>
+<script data-bundlelength="1109058" data-bundlename="common" data-includedscripts="VSS/Fonts/TextFonts;VSS/Fonts/IconFonts;Gallery/Client/Pages/Common/Base.View;Gallery/Client/Common/Telemetry;Gallery/Client/Controls/ErrorControl/ErrorControl.View;Gallery/Client/Service/VSSGallery/VSSGallery;Gallery/Client/Service/VSGallery/VSGallery;VSS/FeatureAvailability/RestClient;VSS/Error;VSS/Bundling" nonce="g1jkVm74xmvFdKMHV1KkfQ==" src="https://cdn.vsassets.io/bundles/vss-bundle-common-v9aL3yPj27uck7H_cK5YWDKuvSBGPj94QyqllgNGR-bc=" type="text/javascript"></script>
+<script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('endLoadBundleOuter-common'); }</script>
+<script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('startLoadBundleOuter-view'); }</script>
+<script data-bundlelength="1391157" data-bundlename="view" data-includedscripts="Gallery/Client/Pages/VSSItemDetails/VSSItemDetails.View;VSS/Error" nonce="g1jkVm74xmvFdKMHV1KkfQ==" src="https://cdn.vsassets.io/bundles/vss-bundle-view-vcPkftvG4ufUsLOXUcoNPa9c7BxCd2xwypf2Naf4w4ps=" type="text/javascript"></script>
+<script nonce="g1jkVm74xmvFdKMHV1KkfQ==" type="text/javascript">if (window.performance && window.performance.mark) { window.performance.mark('endLoadBundleOuter-view'); }</script>
+
+<script type="text/javascript" nonce="g1jkVm74xmvFdKMHV1KkfQ=="> if (window.performance && window.performance.mark) { window.performance.mark('requireStart'); }
+require(["VSS/Fonts/TextFonts","VSS/Fonts/IconFonts","Gallery/Client/Pages/VSSItemDetails/VSSItemDetails.View","Gallery/Client/Pages/Common/Base.View","Gallery/Client/Common/Telemetry","Gallery/Client/Controls/ErrorControl/ErrorControl.View","Gallery/Client/Service/VSSGallery/VSSGallery","Gallery/Client/Service/VSGallery/VSGallery","VSS/FeatureAvailability/RestClient","VSS/Error"], function(){  if (window.performance && window.performance.mark) { window.performance.mark('requireEnd'); } window.requiredModulesLoaded=true;  });
+</script>
+
+
+    
+    <div class="page-content">
+        <div class="header-section">
+            
+            <div class="uxservices-header" role="banner">
+                <div id="ux-header">
+                <div class="upperBand">
+                    <div class="upperBandContent marketplace-header">
+                        <a href="/" title="Marketplace" class="left" >  
+                            <div class="marketPlaceLogoLink bowtie-icon bowtie-brand-visualstudio vs-brand-icon menu-item-icon"></div>
+                            <div class="visualStudioLogoLink"> Visual Studio  </div>
+                            <div id="marketPlaceLogoLink" class="marketPlaceLogoLink">|   Marketplace</div>
+                        </a>
+                        <div class="right">
+                             
+                            <div id="signIn">
+                                
+                                    <a href="https://app.vssps.visualstudio.com/_signin?realm=marketplace.visualstudio.com&amp;reply_to=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Doderwat.indent-rainbow&amp;redirect=1&amp;context=eyJodCI6MywiaGlkIjoiMjY2M2IxM2YtNTBlMy1hNjU1LWExNTktMjJmNmY0NzI1ZmFiIiwicXMiOnt9LCJyciI6IiIsInZoIjoiIiwiY3YiOiIiLCJjcyI6IiJ90&amp;workflowId=marketplace&amp;wt.mc_id=o~msft~marketplace~signIn#ctx=eyJTaWduSW5Db29raWVEb21haW5zIjpbImh0dHBzOi8vbG9naW4ud2luZG93cy5uZXQiLCJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20iXX01" class="scarabLink" style="float:left;margin-left:23px;padding-top:1px;color:#fff;font-weight:400;">
+                                        Sign in
+                                    </a>
+                                
+                            </div>                            
+                            <div data-fragmentname="SearchBox" id="Fragment_SearchBox">
+                              <div class="SearchBox" role="search">
+                                <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+                                  <input id="HeaderSearchTextBox" aria-label="search" name="query" type="text" maxlength="200" autocomplete="off">
+                                  <input id="RefinementId" name="refinement" type="hidden" value="198">
+                                  <button class="bowtie-icon bowtie-search header-search-button" id="HeaderSearchButton" value="" type="submit"></button>
+                                </form>
+                                <a class="bowtie-icon bowtie-search metroSearchButton" tabindex="0" title="Search here"></a>
+                              </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            
+        </div>
+        <div id="gallery-content">
+            
+    <script id="item-details-view-template" type="text/html">
+    <div class="item-details-control-root">
+        <!-- ko if: !showMinimalView -->
+        <div class="breadcrumb" role="navigation">
+            <div class="gallery-centered-content">
+                <span data-bind="template: { name: 'bread-crumb-template', data: breadCrumbViewModel}"></span>
+                <!--ko if: vscodeEditorDownloadLink-->
+                <span class="vsCodeDownloadLinkContainer">
+                    <span data-bind="text: vscodeIntroText"></span>
+                    <a class="vsCodeDownloadLink" data-bind="attr: { href: vscodeEditorDownloadLink, target: '_blank', rel: 'noreferrer noopener', 'aria-label': vscodeDownloadDescription }, text: vscodeEditorDownloadText, click: vsCodeDownloadClick()"></a>
+                </span>
+                <!--/ko -->
+            </div>
+        </div>
+        <div class="optIn-bar-container">
+            <div class="gallery-centered-content react-new-acquisition-container" role="complementary">
+                <div data-bind="galleryReactElem: acquisitionExperienceOptInBar"></div>
+            </div>
+        </div>        
+        <!-- /ko -->
+        <div class="ux-item-details" role="main">
+            <div class="ux-section-banner" id="section-banner" data-bind="style: { 'background-color': brandingColor }">
+                <div class="ux-section-core gallery-centered-content">
+                    <table role="presentation">
+                        <tr>
+                            <td class="item-img" data-bind="renderRegisteredTemplate: { templateName: 'new-image-template', data: imageViewModelOption() }"></td>
+                            <td class="item-header">
+                                <div class="item-header-content"  data-bind="css: brandingTheme">
+                                    <h1><span class="ux-item-name" data-bind="text: itemName"></span></h1>
+                                    <!-- ko if: isTitleTagPresent() && !isNewAcquisitionExperienceEnabled() -->
+                                    <span class="ux-item-titleTag" data-bind="text: titleTag, css: brandingTheme"></span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.showReportsLink -->
+                                    <span class="divider"> | </span>
+                                    <a class="ux-gallery-item-reports-link" data-bind="attr: { href: $data.reportsLink, target:'_blank'}, style: {color: brandingThemeColor}, click: _publishTelemetryEventDetailsPageReportsClicked">
+                                        <i class="bowtie-icon bowtie-file-content"></i>
+                                        <span data-bind="text: $data.reportsLinkDisplayName"></span>
+                                    </a>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.showGalleryItemEditLink -->
+                                    <span class="divider"> | </span>
+                                    <a class="ux-gallery-item-edit-link" data-bind="attr: { href: $data.galleryItemEditLink, target:'_blank'}, style: {color: brandingThemeColor}">
+                                        <i class="bowtie-icon bowtie-edit-outline"></i>
+                                        <span data-bind="text: $data.galleryItemEditLinkDisplayName"></span>
+                                    </a>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.galleryItemLink -->
+                                    <span class="ux-gallery-item-preview">
+                                        <a data-bind="text: $data.galleryItemLinkDisplayName, attr: { href: $data.galleryItemLink, target:'_blank'}"></a>
+                                    </span>
+                                    <!-- /ko -->
+                                    <div class="ux-item-second-row-wrapper">
+                                        <!--ko if: $data.publisherLink -->
+                                        <div class="ux-item-publisher">
+                                            <h2 role="presentation"><a class="ux-item-publisher-link item-banner-focussable-child-item" data-bind="text: $data.publisherDisplayName, attr: { href: $data.publisherLink, 'aria-label': $data.publisherPageLinkDescription }, style: {color: brandingThemeColor}"></a></h2>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!--ko if: !$data.publisherLink -->
+                                        <div class="ux-item-publisher">
+                                            <h2 role="presentation"><span class="ux-item-publisher-link" data-bind="text: $data.publisherDisplayName, style: {color: brandingThemeColor}"></span></h2>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: showMarketplaceCertifiedBadge -->
+                                        <div class="ux-marketplace-certified-badge">
+                                            <div data-bind="galleryReactElem: marketplaceCertifiedBadge"></div>
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <!-- ko if: showInstalls -->
+                                        <span class="divider"> | </span>
+                                        <div class="ux-item-rating">
+                                            <!-- ko if: isGetStartedType || !isSeparateUpdateAndInstallsEnabled -->
+                                            <div class="bowtie-icon bowtie-install"></div>
+                                            <!-- /ko -->
+                                            <!-- ko if: !isGetStartedType -->
+                                            <span class="installs-text" data-bind="text: installsText, attr: { title: installsHoverText}"></span>
+                                            <!-- /ko -->
+                                            <!-- ko if: isGetStartedType -->
+                                            <span class="clicks-text" data-bind="text: clicksText"></span>
+                                            <!-- /ko -->
+                                        </div>
+                                        <!-- /ko -->
+                                        <!-- ko if: showInstalls && !isGetStartedType && isSeparateUpdateAndInstallsEnabled && !isVssExtensionOrResource -->
+                                        <span class="divider"> | </span>
+                                        <div class="ux-item-rating">
+                                            <div class="bowtie-icon bowtie-install"></div>
+                                            <span class="downloads-text" data-bind="text: downloadsText, attr: { title: downloadsHoverText}"></span>
+                                        </div>
+                                        <!-- /ko -->
+
+                                        <!-- ko if: showRatingReview && reviewResultsLoaded() -->
+                                        <a href='#review-details' class="ux-item-review-rating-wrapper" data-bind="attr: {'aria-label': $data.ratingsScreenReaderText }">
+                                            <span class="ux-item-review-rating" data-bind="attr: { title: bannerAverageRatingText }">
+                                                <span class="divider"> | </span>
+                                                <span class="ux-item-rating-control" data-bind="template: { name: 'rating-control-page-template', data: avgRatingDetailsOnBanner }"></span>
+                                                <span class="ux-item-rating-count"> (<span data-bind="{text: bannerTotalReviewCount }"></span>) </span>
+                                            </span>
+                                        </a>
+                                        <!-- /ko -->
+                                        <span class="divider"> | </span>
+                                        <span class="item-price-category" data-bind="text: itemPriceCategory"></span>
+                                        <div class="ux-vsippartner" data-bind="visible: isVSIPPartner">
+                                            <span class="divider"> | </span>
+                                            <img class="ux-item-vsippartner" data-bind="attr: { src: vsipPartnerImgPath }" />
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                    <div class="ux-item-shortdesc" data-bind="text: itemDescription"></div>
+                                    <!-- ko if: !isUnpublished -->
+                                    <div class="ux-item-action">
+                                        <!-- ko if: !isVSCode && !isVSExtension && !isVSForMacExtension  -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <!-- ko if: !isNewAcquisitionExperienceEnabled() -->
+                                        <!-- ko if: trialButtonVisible -->
+                                        <a class="trial-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggle(trialLink), href: trialLink, target: $data.getTargetTrial(), rel: 'noreferrer noopener' }" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: trialButtonText, click: $data.clickActionButton()"></button>
+                                        </a>
+                                        <!-- /ko-->
+                                        <a class="install-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggle(actionLink), href: actionLink, target: $data.getTargetAction(), rel: 'noreferrer noopener', title: actionButtonTitle }, css: {linkDisabled: actionButtonDisabled}, visible: actionButtonVisible" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: actionButtonText, css: {buttonDisabled: actionButtonDisabled, showDropdown: installForPaidUsersSupported}, click: $data.clickActionButton(), disable: actionButtonDisabled"></button>
+                                        </a>
+                                        <!-- ko if: installForPaidUsersSupported -->
+                                        <span role="button" aria-label="dropdown" aria-haspopup="true" class="action-button-dropdown bowtie-icon bowtie-chevron-down-light" data-bind="click: $data.clickActionButtonDropdownIcon(), onOpenDropdown: $data.clickActionButtonDropdownIcon(), css: brandingTheme" tabindex="0"></span>
+                                        <!-- /ko-->
+                                        <!-- /ko -->
+                                        <!-- ko if: isNewAcquisitionExperienceEnabled() -->
+                                        <a class="install-button-container" data-bind="attr:{href: acquisitionLink, target: $data.actionLinkNewTabOpen(), title: acquisitionButtonTitle, rel: 'noreferrer noopener'}" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: acquisitionButtonText, css: {buttonDisabled: acquisitionButtonDisabled}, click: $data.clickActionButton(), disable: acquisitionButtonDisabled"></button>
+                                        </a>
+                                        <span class="trial-info-container" data-bind="text: $data.helpText, visible: $data.helpTextVisible"/>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if : showOfferPlans && !isNewAcquisitionExperienceEnabled()-->
+                                        <a href="#plan-details" class="ux-item-meter-pricing-wrapper item-banner-focussable-child-item" data-bind="click: $data.clickPricingBanner()">
+                                            <span class="ux-item-meter-start-plan" data-bind="text: startPlanInfoText, style: {color: brandingThemeColor}"></span>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if: isDownloadLinkPresent() -->
+                                        <!-- ko if: !showMinimalView -->
+                                        <a class="download-button-container" data-bind="attr: { 'data-toggle': $data.dataTogggleDownload(downloadLink), href: downloadLink }, click: startDownload" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: downloadButtonText"></button>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if: isClickLinkPresent() -->
+                                        <a class="download-button-container" data-bind="attr: { href: downloadLink }, click: startDownload" tabindex="-1">
+                                            <button class="ux-button install" data-bind="text: clickButtonText"></button>
+                                        </a>
+                                        <!-- /ko -->
+                                        <!-- ko if: isVSCode -->
+                                            <!--ko if: isOneClickInstallExperienceVisible -->
+                                            <div class="one-click-install-container">
+                                                <div data-bind="galleryReactElem: installButtonContainer"></div>
+                                                <div class="installHelpInfo">
+                                                    <a data-bind="attr: { href: vscodeInstallHelpLink, target: '_blank', rel: 'noreferrer noopener'}, css: brandingTheme, html: vscodeInstallHelpText, click:onVSCodeTroubleInstallingLinkClick">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- /ko -->
+                                        <!-- ko ifnot: isOneClickInstallExperienceVisible -->
+                                            <div class="vscode-copy-command-wrapper" data-bind="renderRegisteredTemplate: { templateName: 'vscode-copy-command-template', data: VSCodeCopyCommandOptions() }">
+                                            </div>
+                                        <!-- /ko -->
+                                        <!-- /ko -->
+                                        <!-- ko if : !isNewAcquisitionExperienceEnabled() -->
+                                        <span data-bind="html: offersCost, visible: offersCost"></span>
+                                        <!-- /ko -->
+                                        <!-- ko if: isPreviewStringPresent() && !isNewAcquisitionExperienceEnabled() -->
+                                        <span class="ux-item-previewString" data-bind="text: previewString"></span>
+                                        <!-- /ko -->
+                                    </div>
+                                    <!--  /ko -->
+                                    <div class="ux-item-free-install" data-bind="visible: !isUnpublished && actionDescriptionHtml, html: actionDescriptionHtml"></div>
+                                    <div class="ux-item-offers-cost-text" data-bind="visible: offersCostText, html: offersCostText"></div>
+                                    <div class="ux-item-unpublished-text" data-bind="visible: unpublishedText">
+                                        <span class="ux-item-unpublished-status-icon bowtie-icon bowtie-status-info"></span>
+                                        <span data-bind="text: unpublishedText"></span>
+                                    </div>
+                                    <!-- /ko -->
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="gallery-centered-content">
+                <div class="ux-section-details">
+                    <div data-bind="galleryReactElem: ItemDetailsComponent"></div>
+                </div>
+            </div>
+            <div class="modal install-page" data-backdrop="static" id="install-pop-up" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="item-banner-container">
+                <div class="install-page-content gallery-centered-content">
+                    <div class="item-banner-container" id="item-banner-container" role="presentation">
+                        <div class="install-page-item-banner"></div>
+                    </div>
+                    <div class="acquire-item-workflow-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ko if: showQnAAndRnRContainer-->
+    <div class="gallery-centered-content react-qna-container" id="qna-details" role="complementary" data-bind="attr: {'aria-label': qnaHeadingText}">
+       <div data-bind="galleryReactElem: qnaAndRnRContainer"></div>
+    </div>
+    <!-- /ko -->
+</script>
+<script id="vscode-copy-command-template" type="text/html">
+    <div class="vscode-item-action">
+        <!--ko if: isOneClickInstallExperienceVisible -->
+        <a class="install-button-container" data-bind="attr: { href: actionLinkInstall}" tabindex="-1">
+            <button class="ux-button install" data-bind="text: actionInstallButtonText, click: onVSCodeInstallClick"></button>
+        </a>
+        <span class="installHelpText">
+            <a data-bind="attr: { href: installHelpLink, target: '_blank', rel: 'noreferrer noopener'}, css: brandingTheme, text: installHelpText"></a>
+            <i class="bowtie-icon bowtie-navigate-external"></i>
+        </span>
+        <div class="newExpVSCodeEditorDownload">
+            <span data-bind="text: newExpVSCodeEditorInstallText"></span>
+            <a class="vsCodeEditorDownloadLink" data-bind="attr: { href: vscodeEditorDownloadLink, target: '_blank', rel: 'noreferrer noopener', 'aria-label': vscodeDownloadDescription }, text: vscodeEditorDownloadText, css: brandingTheme, click: clickCopyCommandDownload()"></a>
+            <i class="bowtie-icon bowtie-navigate-external"></i>
+        </div>
+        <!--<div class="vscode-version">
+            <div class="vscode-version-info" data-bind="text: versionSupportedText"></div>
+            <a class="vscode-version-info-link" data-bind="attr: { href: versionLink, target: actionLinkNewTab ? '_blank' : '_self' }, text: findVersionText, css: brandingTheme, click: logVersionTelemetry"></a>
+        </div>-->
+        <!--<div class="vscode-copy">
+            <a class="vscode-copy-link" tabindex="0" data-toggle="modal" data-bind="click: function(event) { return openCopyModal() }, enterkey: function(event) { return openCopyModal() }, css: brandingTheme, text: clickHere"></a>
+            <div class="vscode-copy-info" data-bind="text: copyInfoText"></div>
+        </div>-->
+        <!--<div class="vscode-copy-insiders">
+            <a class="vscode-insiders-install" data-bind="attr: { href: insidersInstallLink}, text: clickHere, css: brandingTheme, click: logInstallInsidersTelemetry"></a>
+            <div class="vscode-insiders-install-info" data-bind="text: insidersInstallInfoText"></div>
+        </div>-->
+        <!--<div class="modal" id="modal-copy-command-container" tabindex="-1" role="dialog">
+            <div class="modal-copy-command">
+                <div class="copy-modal-header">
+                    <div class="vscode-install-title" data-bind="text: installTitle"></div>
+                    <div id="vscode-install-instructions" class="vscode-install-instructions" data-bind="html: installInstructions"></div>
+                    <div class="vscode-install-info-container">
+                        <div class="vscode-command-container">
+                            <input type="text" class="vscode-command-input" readonly="" aria-labelledby="vscode-install-instructions" data-bind="attr: { value: copyCommand, id:textAreaID, size: copyCommandLength }, click: selectTextOnClick"> -->
+                            <!-- ko if: iscopySupported || isFlashSupported -->
+                            <!--<button class="copy-to-clipboard-button" data-bind="attr: {title: copyButtonTooltip, id: copyButtonID, 'data-clipboard-target': iscopySupported ? null : textAreaID} , click: iscopySupported ? copyOnClick : null, text: copyButtonText, event:{keypress: copyOnEnter}"></button>
+                            <div class="copied-result-display" data-bind="text: displayCopyResultText"></div>-->
+                            <!-- /ko -->
+                        <!--</div>                        
+                    </div>
+                </div>
+                    <div class="copy-modal-footer">
+                        <button class="cancel-copy-modal-button" data-dismiss="modal" data-bind="text: cancelButtonText, click: closeCopyModal"></button>
+                    </div>
+                </div>
+        </div>-->
+        <!-- /ko -->
+        <!--ko ifnot: isOneClickInstallExperienceVisible -->
+        <div class="vscode-install-title" data-bind="text: installTitle"></div>
+        <div id="vscode-install-instructions" class="vscode-install-instructions" data-bind="html: installInstructions"></div>
+        <div class="vscode-install-info-container">
+            <div class="vscode-command-container">
+                <input type="text" class="vscode-command-input" readonly="" aria-labelledby="vscode-install-instructions" data-bind="attr: { value: copyCommand, id:textAreaID, size: copyCommandLength }, click: selectTextOnClick">
+                <!-- ko if: iscopySupported || isFlashSupported -->
+                <button class="copy-to-clipboard-button" data-bind="attr: {title: copyButtonTooltip, id: copyButtonID, 'data-clipboard-target': getDataClipBoardtarget()} , click: getCopyClick(), text: copyButtonText, event:{keypress: copyOnEnter}"></button>
+                <!-- /ko -->
+            </div>
+            <div class="copied-display-container">
+                <div class="copied-display-div" data-bind="attr: {  id: copiedAnimationID }, text: copiedAnimationText"></div>
+            </div>
+            <a class="vscode-moreinformation" target="_blank" data-bind="text: actionButtonText, attr: { href: actionLink}, css: brandingTheme, click: publishTelemetryEvent_MoreInfo">
+            </a>
+        </div>
+        <!-- /ko -->
+    </div>
+</script><script id="image-template" type="text/html">
+    <img class="image-display" alt="" data-bind="attr: { src: imageSrc}, css: imageStyle, visible: imageVisible" />
+    <div class="bowtie-icon" data-bind="visible: (!imageVisible && !bowtieStyle), css: bowtieStyle "></div>
+    <span data-bind="template: { afterRender: componentLoaded($element) }"></span>
+</script><script id="carousel-template" type="text/html">
+       <div class="carousel-wrapper">    
+           <div class="carousel" role="listbox" aria-orientation="horizontal" data-bind='foreach: items, scroll: viewPortStartIndex'>
+               <!-- ko if: $parent.showItem($index()) -->
+               <div class="carousel-item" data-bind='enterkey: $parent.itemEnterPress(), template: { name: $parent.itemsDisplayTemplate }, attr:{tabindex: $parent.getTabIndexForItem($index())}'></div>
+               <!-- /ko -->
+           </div>
+        </div>
+        <div class="carousel-indicators" data-bind="foreach: indicators, event: { keydown: carouselIndicatorKeyHandler }">
+            <span class="indicator" role="button" tabindex="0" aria-label="indicator" data-bind="css: { active: $parent.getCss($index()) }, 
+                click: $parent.indicatorSelect($index()),
+                enterkey: $parent.indicatorSelect($index()),
+                spacekey: $parent.indicatorSelect($index())"></span>
+        </div>
+        <div class="carousel-nav" data-bind="if: ifNav()">
+            <a href="" title="next" class="carousel-next gallery-element-focus-style-light" data-bind="click: scrollRight, css: { disabled: caraousalNextDisabled() }"><i class="bowtie-icon bowtie-chevron-right"></i></a>
+            <a href="" title="previous" class="carousel-prev gallery-element-focus-style-light" data-bind="click: scrollLeft, css: { disabled: caraousalPrevDisabled() }"><i class="bowtie-icon bowtie-chevron-left"></i></a>
+        </div>
+</script>
+<script id="gallery-item-card-template" type="text/html">
+    <a class="gallery-item-card-container" data-bind="attr: { href: link, target: linkTarget, 'aria-label': getScreenReaderText(), tabindex: getTabindex() }, click: itemTileClick()">
+        <div class="gallery-item-card" data-bind="attr: { link: itemClassName, title: title}">
+            <div class="cover">
+                <!-- ko if: showCertifiedBadge -->
+                <i class="bowtie-icon bowtie-shield-verified-fill active-user-info certified-badge-image" data-bind="attr: { title: certifiedBadgeText }" />
+                <!-- /ko -->
+                <div class="icon-cell" data-bind="renderRegisteredTemplate: { templateName: 'new-image-template', data: imageViewModelOption() }, attr: { title: title }"></div>
+                <div class="core-info-cell">
+                    <div class="name">
+                        <span class="item-title" data-bind="text: title" />
+                        <!-- TextFadeout based on extension title. MaxWidth of title: 158px and Fadeout width: 30px -->
+                        <span class="text-fadeout" data-bind="style: {width: calculateWidthBasedOnSibling($element, 'item-title', 158, '30px')}" />
+                    </div>
+                    <!--ko ifnot: showDownloadCount -->
+                    <div class="publisher">
+                        <span data-bind="text: publisher, attr: { title: publisher }"> </span>
+                    </div>
+                    <!-- /ko -->
+                    <!--ko ifnot: showDownloadCount -->
+                    <span class="text-fadeout"></span>
+                    <!-- /ko -->
+                    <!--ko if: showDownloadCount -->
+                    <div class="core-info-second-row">
+                        <span class="installs" data-bind="visible: installCount !== '0'">
+                            <i class="bowtie-icon bowtie-install install-icon" />
+                            <span class="install-count" data-bind="text: installCount"></span>
+                        </span>
+                        <div class="publisher">
+                            <span data-bind="text: publisher, attr: { title: publisher }" />
+                            <span class="text-fadeout" />
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="details">
+                <div class="description" data-bind="text: description, attr: { title: description }" />
+            </div>
+            <div class="stats-and-offer">
+                <!-- ko if: showRatingReview -->
+                <div class="rating-and-price">
+                    <div role="img" class="rating" data-bind="template: { name: 'rating-control-page-template', data: ratingViewModel }, attr: { 'alt': averageRatingText, title: averageRatingText }"></div>
+                    <div class="pricing-tag" data-bind="text: pricingTag, attr: { title: pricingTag }"></div>
+                    <span class="text-fadeout" />
+                </div>
+                <!-- /ko -->
+                <!-- ko ifnot: showRatingReview -->
+                <div class="pricing-tag" data-bind="text: pricingTag, attr: { title: pricingTag }"></div>
+                <span class="text-fadeout" />
+                <!-- /ko -->
+            </div>
+        </div>
+    </a>
+</script>
+<script id="rating-control-page-template" type="text/html">
+    <span class="rating-control">
+        <!-- ko foreach: fullStarArray() -->
+        <img class="star full-star" alt="" data-bind="event: {click: $parent.fullStarClick($index()),
+                                                       mouseover: $parent.fullStarMouseOver($index()), 
+                                                       mouseout: $parent.fullStarMouseOut(),
+                                                       keypress: $parent.fullStarKeyPress($index())},
+                                                       attr: {tabindex: $parent.starTabIndex(), src: $parent.fullStarPath, 'aria-label': $index()+1+' star' }" />
+        <!-- /ko -->
+
+        <!-- ko if: isReadOnly-->
+        <!-- ko foreach: halfStarArray() -->
+        <img class="star half-star" alt="" data-bind="attr: {tabindex: $parent.starTabIndex(), src: $parent.halfStarPath}" />
+        <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko foreach: emptyStarArray() -->
+        <img class="star empty-star" alt="" data-bind="event: {click: $parent.emptyStarClick($index()),
+                                                        mouseover:$parent.emptyStarMouseOver($index()), 
+                                                        keypress: $parent.emptyStarKeyPress($index())},
+                                                        attr: {tabindex: $parent.starTabIndex(), src: $parent.emptyStarPath, 'aria-label': $index()+1+$parent.fixedFullStars()+' star'}" />
+        <!-- /ko -->
+    </span>
+
+</script><script id="item-banner-template" type="text/html">
+    <div class="item-banner-root" data-bind="css: itemCss">
+        <table class="item-banner" role="presentation">
+            <tr>
+                <td class="item-header" data-bind="style: { 'background-color': brandingColor }, css: brandingTheme">
+                    <div class="item-header-content">
+                        <div class="ux-item-name" data-bind="text: title"></div>
+                        <div class="ux-item-description" data-bind="text: publisherDisplay"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</script><script id="bread-crumb-template" type="text/html">
+    <span class="bread-crumb-container" data-bind="foreach: members, event: { keydown: breadcrumbKeyHandler}">
+        <!-- ko if: url -->
+        <a class="member" data-bind="text: text, attr: {href: url}"></a>
+        <!-- /ko -->
+        <!-- ko if: !url -->
+        <span class="member" data-bind="text: text"></span>
+        <!-- /ko -->  
+        <!-- Do not draw seprarator after the last member -->
+        <span class="separator" data-bind="if: $index() < $parent.members.length-1">></span>
+    </span>
+</script>
+<script id="error-control-template" type="text/html">
+    <div class="gallery-error-control">
+        <div class="error-text" data-bind="text: errorText"></div>
+        <div class="tips-header" data-bind="text: tipsText"></div>
+        <div class="error-diagnosis" data-bind="html: errorDiagnosisHtml"></div>
+        <div class="report-issue" data-bind="html: contactUsHtml, visible: isHosted"></div>
+    </div>
+</script><script id="new-image-template" type="text/html">
+    <img class="image-display" alt="" data-bind="attr: { src: imageSrc }, css: imageStyle, visible: imageVisible" />
+    <div class="bowtie-icon" data-bind="visible: isBowtieVisible(), css: bowtieStyle"></div>
+</script><script id="spinner-template" type="text/html">
+    <table class="spinner-control-root">
+        <tr>
+            <td class="spinner-icon">
+                <i class="bowtie-icon bowtie-spinner"></i>
+            </td>
+            <!-- ko ifnot: $data && $data.toString() === '[object Object]' -->  
+            <td class="spinner-message" data-bind="text: $data"></td>
+             <!-- /ko -->
+        </tr>
+    </table>
+</script>
+
+<script id="spinner-template-accessible" type="text/html">
+    <!-- ko if: showSpinner() -->  
+    <table class="spinner-control-root">
+        <tr>
+            <td class="spinner-icon">
+                <i class="bowtie-icon bowtie-spinner"></i>
+            </td>
+            <!-- ko if: spinnerMessage  -->  
+            <td class="spinner-message" data-bind="text: spinnerMessage"></td>
+             <!-- /ko -->
+        </tr>
+    </table>
+    <!-- /ko -->
+</script>
+
+    <script type="text/javascript"  nonce="g1jkVm74xmvFdKMHV1KkfQ==" src="https://cdn.vsassets.io/3rdParty/_scripts/bootstrap.min.js"></script>
+    
+    <div class="main-content item-details-main-content">
+        <i class="centered big-spinner bowtie-icon bowtie-spinner"></i>
+    </div>
+    <div class="vss-item-data">
+        <script class="vss-extension" defer="defer" type="application/json">{"publisher":{"publisherId":"ac064ae0-224d-4351-9aa4-45ef7bf3ed21","publisherName":"oderwat","displayName":"oderwat","flags":"none"},"extensionId":"eaa2127d-cb69-4ab9-8505-a60c9ee5f28b","extensionName":"indent-rainbow","displayName":"indent-rainbow","flags":"validated, public","lastUpdated":"2018-09-30T08:05:55.613Z","publishedDate":"2016-02-21T22:07:52.93Z","releaseDate":"2016-02-21T22:07:52.93Z","shortDescription":"Makes indentation easier to read","versions":[{"version":"7.2.4","flags":"validated","lastUpdated":"2018-08-17T14:51:13.317Z","files":[{"assetType":"Microsoft.VisualStudio.Code.Manifest","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Code.Manifest"},{"assetType":"Microsoft.VisualStudio.Services.Content.Details","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.Content.Details"},{"assetType":"Microsoft.VisualStudio.Services.Content.License","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.Content.License"},{"assetType":"Microsoft.VisualStudio.Services.Icons.Default","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.Icons.Default"},{"assetType":"Microsoft.VisualStudio.Services.Icons.Small","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.Icons.Small"},{"assetType":"Microsoft.VisualStudio.Services.VsixManifest","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.VsixManifest"},{"assetType":"Microsoft.VisualStudio.Services.VSIXPackage","source":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714/Microsoft.VisualStudio.Services.VSIXPackage"}],"properties":[{"key":"Microsoft.VisualStudio.Services.Links.Repository","value":"https://github.com/oderwat/vscode-indent-rainbow.git"},{"key":"Microsoft.VisualStudio.Services.Links.Getstarted","value":"https://github.com/oderwat/vscode-indent-rainbow.git"},{"key":"Microsoft.VisualStudio.Services.Links.Support","value":"https://github.com/oderwat/vscode-indent-rainbow/issues"},{"key":"Microsoft.VisualStudio.Services.Links.Source","value":"https://github.com/oderwat/vscode-indent-rainbow.git"}],"assetUri":"https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.2.4/1534517309714","fallbackAssetUri":"https://oderwat.gallery.vsassets.io/_apis/public/gallery/publisher/oderwat/extension/indent-rainbow/7.2.4/assetbyname"}],"categories":["Other"],"statistics":[{"statisticName":"install","value":141045.0},{"statisticName":"averagerating","value":4.8000001907348633},{"statisticName":"ratingcount","value":35.0},{"statisticName":"trendingdaily","value":0.00922646718571459},{"statisticName":"trendingmonthly","value":15.264125366397208},{"statisticName":"trendingweekly","value":3.0447341712858145},{"statisticName":"updateCount","value":117192.0},{"statisticName":"weightedRating","value":4.7121380555927148}],"installationTargets":[{"target":"Microsoft.VisualStudio.Code","targetVersion":""}],"deploymentType":0}</script>
+    </div>
+    <div class="vss-item-token">
+        <script class="vss-extension-token" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-offer">
+        <script class="vss-extension-offer" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-offer-meter-price-data">
+        <script class="vss-extension-offer-meter-price" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-offer-meter-price-details-data">
+        <script class="vss-extension-offer-meter-price-currency" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-overview-data">
+        <script class="vss-item-overview" defer="defer" type="application/json">"# Indent-Rainbow\n\n## A simple extension to make indentation more readable\n-------------------\n\nThis extension colorizes the indentation in front of your text alternating four different colors on each step. Some may find it helpful in writing code for Nim or Python.\n\n![Example](https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png)\n\nGet it here: [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)\n\nIt uses the current editor window tab size and can handle mixed tab + spaces but that is not recommended. In addition it visibly marks lines where the indentation is not a multiple of the tab size. This should help to find problems with indentation in some situations.\n\n### Configuration\n\nAlthough you can just use it as it is there is the possibility to configure some aspects of the extension:\n\n```js\n  // For which languages indent-rainbow should be activated (if empty it means all).\n  \"indentRainbow.includedLanguages\": [] // for example [\"nim\", \"nims\", \"python\"]\n\n  // For which languages indent-rainbow should be deactivated (if empty it means none).\n  \"indentRainbow.excludedLanguages\": [] // for example [\"plaintext\"]\n\n  // The delay in ms until the editor gets updated.\n  \"indentRainbow.updateDelay\": 100 // 10 makes it super fast but may cost more resources\n```\n\n*Notice: Defining both `includedLanguages` and `excludedLanguages` does not make much sense. Use one of both!*\n\nYou can configure your own colors by adding and tampering with the following code:\n\n```js\n  // Defining custom colors instead of default \"Rainbow\" for dark backgrounds.\n  // (Sorry: Changing them needs an editor restart for now!)\n  \"indentRainbow.colors\": [\n    \"rgba(64,64,16,0.3)\",\n    \"rgba(32,64,32,0.3)\",\n    \"rgba(64,32,64,0.3)\",\n    \"rgba(16,48,48,0.3)\",\n    \"rgba(128,32,32,0.3)\"\n  ]\n\n  // The indent color if the number of spaces is not a multiple of \"tabSize\".\n  \"indentRainbow.errorColor\": \"rgba(128,32,32,0.3)\"\n```\n\n\u003e Notice: `errorColor` was renamed from `error_color` in earlier versions.\n\nSkip error highlighting for RegEx patterns. For example, you may want to turn off the indent errors for JSDoc\u0027s valid additional space (disabled by default), or comment lines beginning with `//`\n\n```js\n  // Example of regular expression in JSON (note double backslash to escape characters)\n  \"indentRainbow.ignoreLinePatterns\" : [\n    \"/.*\\\\*.*/mg\", // lines begining wit *\n    \"/.*\\\\/\\\\/.*/g\" // lines begininning with //\n  ]\n```\n\nSkip error highlighting for some or all languages. For example, you may want to turn off the indent errors for `markdown` and `plaintext`. Default is `plaintext`.\n\n```js\n  \"indentRainbow.ignoreErrorLanguages\" : [\n    \"markdown\", \"plaintext\"\n  ]\n```\n\nThe following is experimental and still buggy. It will basically disable the automatic detection for languages which are not defined in this array. You may not want to use it at all :)\n\n```js\n  // Automatically change indent setting (tabSize / insertSpaces) for a language.\n  \"indentRainbow.indentSetter\": {} // do nothing as default\n\n  // Example for language based indentation:\n  \"indentRainbow.indentSetter\": {\n    \"nim\": { \"tabSize\": 2, \"insertSpaces\": true },\n    \"nims\": { \"tabSize\": 2, \"insertSpaces\": true },\n    \"python\": { \"tabSize\": 4, \"insertSpaces\": true },\n    \"php\": { \"tabSize\": 4, \"insertSpaces\": false }\n  }\n```\n\nBuild with:\n\n```\nnpm install\nnpm run vscode:prepublish\n```\n\nRunning `npm run compile` makes the compiler recompile on file change.\n\nThe current version is my \"first try\" on a VSCode extension. I am sure stuff could be more optimized :)\n\nIf you like this plugin, please consider a small donation!\n\n[![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/oderwat)\n"</script>
+    </div>
+    <div class="vss-item-pricing-data">
+        <script class="vss-item-pricing" defer="defer" type="application/json">""</script>
+    </div>
+    <div class="vss-item-properties-container">
+        <script class="vss-item-properties" defer="defer" type="application/json">{"Microsoft.VisualStudio.Services.Links.Repository":"https://github.com/oderwat/vscode-indent-rainbow.git","Microsoft.VisualStudio.Services.Links.Getstarted":"https://github.com/oderwat/vscode-indent-rainbow.git","Microsoft.VisualStudio.Services.Links.Support":"https://github.com/oderwat/vscode-indent-rainbow/issues","Microsoft.VisualStudio.Services.Links.Source":"https://github.com/oderwat/vscode-indent-rainbow.git"}</script>
+    </div>
+    <div class="is-migrated-container">
+        <script class="is-migrated" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-badges-container">
+        <script class="vss-item-badges" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="user-login-url-data">
+        <script class="user-login-url" defer="defer" type="application/json">"https://app.vssps.visualstudio.com/_signin?realm=marketplace.visualstudio.com\u0026reply_to=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Doderwat.indent-rainbow\u0026redirect=1\u0026context=eyJodCI6MywiaGlkIjoiMjY2M2IxM2YtNTBlMy1hNjU1LWExNTktMjJmNmY0NzI1ZmFiIiwicXMiOnt9LCJyciI6IiIsInZoIjoiIiwiY3YiOiIiLCJjcyI6IiJ90#ctx=eyJTaWduSW5Db29raWVEb21haW5zIjpbImh0dHBzOi8vbG9naW4ud2luZG93cy5uZXQiLCJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20iXX01"</script>
+    </div>
+    <div class="is-connected-server-data">
+        <script class="is-connected-server" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="pinned-user-review-data">
+        <script class="pinned-user-review" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="csp-user">
+        <script class="is-csp-user" defer="defer" type="application/json">null</script>
+    </div>
+    <div class="vss-item-scope-data">
+        <script class="vss-item-scope" defer="defer" type="application/json">null</script>
+    </div>
+    
+        <div class="OrgPublisherDisplayNames">
+        <script class="org-publisher-display-names" defer="defer" type="application/json">["Microsoft","Microsoft DevLabs"]</script>
+        </div>
+    
+    <div class="CreateNewSubscription">
+        <script class="vss-subscription-creation" defer="defer" type="application/json">null</script>
+    </div>
+    
+        <div class="needs-aad-auth-data">
+            <script class="needs-aad-auth" defer="defer" type="application/json">false</script>
+        </div>
+    
+    <div class="can-update-extension-data">
+        <script class="can-update-extension" defer="defer" type="application/json">null</script>
+    </div>
+     <div class="has-publisher-role-reader-data">
+        <script class="has-publisher-role-reader" defer="defer" type="application/json">false</script>
+    </div>
+    
+        <div class="market-url">
+            <script class="gallery-browse-url" defer="defer" type="application/json">"https://visualstudiogallery.msdn.microsoft.com/"</script>
+        </div>
+    
+        <div class="msdn-browse-url">
+            <script class="msdn-url" defer="defer" type="application/json">null</script>
+        </div>
+    
+
+    <div class="vss-install-target-id">
+        <script class="vss-target-id" defer="defer" type="application/json">null</script>
+    </div>
+     <div >
+        <script class="vss-install-context" defer="defer" type="application/json">null</script>
+    </div>
+    
+            <div class="general-info">
+                <script class="general-info-data" defer="defer" type="application/json">{"galleryUrl":"/","resourcesPath":"https://cdn.vsassets.io/v/M144_20181213.9/_content/","isHosted":true}</script>
+            </div>
+        </div>
+        
+        <div id="gallery-footer">
+            
+<footer>
+    
+    <div id="ux-footer" class="ltr" role="contentinfo">
+    
+        <div id="baseFooter">
+            <div data-fragmentname="BaseFooterLinks" id="Fragment_BaseFooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+
+                <div class="linkList">
+                    <ul class="links horizontal">
+                        <!-- EU Cookie Consent: Do not consider user consent on clicking any of the links, by setting data-mscc-ic attribute to false -->
+                        <li>
+                            <a href="https://www.visualstudio.com/support/support-overview-vs" data-mscc-ic="false">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="https://careers.microsoft.com/" data-mscc-ic="false">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="https://go.microsoft.com/fwlink/?LinkID=264782" data-mscc-ic="false">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="https://go.microsoft.com/fwlink/?LinkID=266231" data-mscc-ic="false">Terms of use</a>
+                        </li>
+                        <li>
+                            <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-mscc-ic="false">Trademarks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="rightBaseFooter">
+                &copy; 2018 Microsoft
+                <span class="microsoftLogo" title="Microsoft"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+        
+    </div>
+
+    
+    
+    <div id="utils-accessibility-announce-polite" class="visually-hidden" aria-live="polite"></div>
+    <div id="utils-accessibility-announce-assertive" class="visually-hidden" aria-live="assertive"></div>
+</body>
+</html>
