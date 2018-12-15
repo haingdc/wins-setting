@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js'></script>
+  <script>
+    var twinkle = function (noun, wonderAbout) {
+      return 'Twinkle, twinkle, little ' +
+        noun + '\nHow I wonder where you ' +
+        wonderAbout;
+    }
+
+    var twinkleBat = _.partial(twinkle, 'bat');
+    console.log(twinkleBat('are at'));
+
+    var twinkleStar = _.partial(twinkle, 'star', 'are');
+    console.log(twinkleStar());
+  </script>
+</body>
+
+</html>

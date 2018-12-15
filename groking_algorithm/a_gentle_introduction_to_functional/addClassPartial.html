@@ -1,0 +1,92 @@
+ <html>
+<head>
+<style>
+#myHeader {
+    color: red;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="DEE">W3Schools is the best!</h1>
+<h1 id="DUM">W3Schools is the best!</h1>
+<script>
+  var argsToArray = function(args) {
+      return Array.prototype.slice.call(args, 0);
+  }
+
+  var partial = function() {
+      // chuyển đổi các đối số sang một mảng
+      var args = argsToArray(arguments);
+
+      // shift() cho phép lấy ra phần tử đầu tiên của mảng. Trong trường hợp này phần tử đầu tiên là một hàm. args sẽ chỉ chứa các các đối còn lại.
+      var fn = args.shift();  // 🐘
+
+      // Trở lại một hàm mà khi thực thi nó sẽ gọi hàm fn
+      return function() {
+          var remainingArgs = argsToArray(arguments);
+          return fn.apply(this, args.concat(remainingArgs));  // 🐘 Gọi tôi nhé
+      }
+  }
+
+  function forEach(callback, array) {
+      for (var i = 0; i < array.length; i = i + 1) {
+          callback(array[i], i);
+      }
+  }
+
+  var map = function(callback, array) {
+      var newArray = [];
+      for (var i = 0; i < array.length; i = i + 1) {
+          newArray[i] = callback(array[i], i);
+      }
+      return newArray;
+  }
+
+  var addClass = function(className, element) {
+      element.className += ' ' + className;
+      return element;
+  }
+
+  var addTweedClass = partial(addClass, 'tweedle');
+  var addBoyClass = partial(addClass, 'boy');
+  
+  var ids = ['DEE', 'DUM'];
+  var elements = map(document.getElementById.bind(document), ids);
+  // elements = map(addTweedClass, elements);
+  // elements = map(addBoyClass, elements);
+  // console.log(elements);
+
+  // Thêm các class sau vào các thẻ có ID trong mảng ids phía trên
+  // Cách 1: sử dụng functional program style
+  var classesNeedToAdd = ['twist', 'shout', 'shake', 'voi', 'green'];
+  // var allPartialClassFuncs = map(function (className) {
+  //   return partial(addClass, className);
+  // }, classesNeedToAdd);
+  // // elements = map(addAllClasses[0], elements);
+  // elements = map(function(el) {
+  //   forEach(function(f) {
+  //     f(el)
+  //   }, allPartialClassFuncs);
+  //   return el;
+  // }, elements)
+  // console.log(elements);
+
+  // Cách 2: sử dụng for-loop style
+  // Trong trường hợp này, cách 2 đơn giản hơn so với cách 1
+  elements=[];
+  for(var i=0; i < ids.length; i++) {
+    var el = document.getElementById(ids[i]);
+    elements[i] = el;
+    for (var j=0; j < classesNeedToAdd.length; j++) {
+      addClass(classesNeedToAdd[j], el);
+    }
+  }
+
+  console.log(elements);
+  
+</script>
+
+</body>
+</html>

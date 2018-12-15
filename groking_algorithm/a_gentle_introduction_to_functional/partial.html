@@ -1,0 +1,55 @@
+ <html>
+<head>
+<style>
+#myHeader {
+    color: red;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="DEE">W3Schools is the best!</h1>
+<h1 id="DUM">W3Schools is the best!</h1>
+<script>
+  var argsToArray = function(args) {
+      return Array.prototype.slice.call(args, 0);
+  }
+
+  var partial = function() {
+      // chuyển đổi các đối số sang một mảng
+      var args = argsToArray(arguments);
+
+      // shift() cho phép lấy ra phần tử đầu tiên của mảng. Trong trường hợp này phần tử đầu tiên là một hàm. args sẽ chỉ chứa các các đối còn lại.
+      var fn = args.shift();  // 🐘
+
+      // Trở lại một hàm mà khi thực thi nó sẽ gọi hàm fn
+      return function() {
+          var remainingArgs = argsToArray(arguments);
+          return fn.apply(this, args.concat(remainingArgs));  // 🐘 Gọi tôi nhé
+      }
+  }
+
+  var twinkle = function(noun, wonderAbout) {
+      return 'Twinkle, twinkle, little ' +
+          noun + '\nHow I wonder where you ' +
+          wonderAbout;
+  }
+
+  var twinkleBat = partial(twinkle, 'bat', 'are at');
+  var twinkleStar = partial(twinkle, 'star', 'are');
+  console.log(twinkleBat());
+  console.log(twinkleStar());
+
+  var drawRect = function(color, x, y, width, height) {
+    return 'draw ' + color + ' reactangle: ' + 'x: ' + x + ' - y: ' + y + ' - width: ' + width + '- height: ' + height;
+  }
+  var drawRedRect = partial(drawRect, 'red');
+  console.log(drawRedRect(1, 2, 40, 50));
+
+  var drawRedRectAtOrigin = partial(drawRect, 'red', 0, 0);
+  console.log(drawRedRectAtOrigin(40, 90));
+</script>
+
+</body>
+</html>

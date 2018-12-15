@@ -1,0 +1,6 @@
+{
+  "files.autoSave": "off",
+  "[javascript]": {
+      "editor.formatOnSave": true
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var argsToArray = function (args) {
+      return Array.prototype.slice.call(args, 0);
+    }
+
+    var partial = function () {
+      // chuyển đổi các đối số sang một mảng
+      var args = argsToArray(arguments);
+
+      // shift() cho phép lấy ra phần tử đầu tiên của mảng. Trong trường hợp này phần tử đầu tiên là một hàm. args sẽ chỉ chứa các các đối còn lại.
+      var fn = args.shift();  // 🐘
+
+      // Trở lại một hàm mà khi thực thi nó sẽ gọi hàm fn
+      return function () {
+        var remainingArgs = argsToArray(arguments);
+        return fn.apply(this, args.concat(remainingArgs));  // 🐘 Gọi tôi nhé
+      }
+    }
+    // Bắt đầu so sánh 🐳
+    var formatName = function (firstname, surname, nickname) {
+      return firstname + ' “' + nickname + '” ' + surname;
+    }
+
+    james = partial(formatName, 'james');
+    console.log(james('Sinclair', 'Mad Hatter'));
+
+    var jamesS = partial(formatName, 'james', 'Sinclair');
+    console.log(jamesS('Dormouse'));
+
+    console.log(jamesS('Bandersnatch'));
+    
+  </script>
+</body>
+
+</html>

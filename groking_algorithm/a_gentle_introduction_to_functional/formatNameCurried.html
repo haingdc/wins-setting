@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function curry(fn) {
+      var arity = fn.length;
+
+      function given(argsSoFar) {
+        return function helper() {
+          var args = Array.prototype.slice.call(arguments, 0);
+          var updatedArgsSoFar = argsSoFar.concat(args);
+
+          if (updatedArgsSoFar.length >= arity) {
+            return fn.apply(this, updatedArgsSoFar);
+          }
+          else {
+            return given(updatedArgsSoFar);
+          }
+        }
+      }
+
+      return given([]);
+    }
+
+    // Bắt đầu so sánh 🐼
+    var formatName = function (firstname, surname, nickname) {
+      return firstname + ' “' + nickname + '” ' + surname;
+    }
+
+    var formatNameCurried = curry(formatName);
+
+    var james = formatNameCurried('James');  // ⚓ fix firstname
+
+    console.log(james('Sinclair', 'Mad Hatter'));  // 📞 gọi với surname, nickname
+    //=> James “Mad Hatter” Sinclair
+
+    var jamesS = james('Sinclair')  // ⚓ fix surname
+
+    console.log(jamesS('Dormouse'));  // 📞 gọi với nickname
+    //=> James “Dormouse” Sinclair
+
+    console.log(jamesS('Bandersnatch'));  // 📞 gọi với nickname
+    //=> James “Bandersnatch” Sinclair
+  </script>
+</body>
+
+</html>

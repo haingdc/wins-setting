@@ -1,0 +1,39 @@
+ <html>
+<head>
+<style>
+#myHeader {
+    color: red;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="DEE">W3Schools is the best!</h1>
+<h1 id="DUM">W3Schools is the best!</h1>
+<script>
+  var map = function(callback, array) {
+      var newArray = [];
+      for (var i = 0; i < array.length; i = i + 1) {
+          newArray[i] = callback(array[i], i);
+      }
+      return newArray;
+  }
+
+  var addClass = function(className, element) {
+      element.className += ' ' + className;
+      return element;
+  }
+
+  var addTweedleClass = function(el) {
+      return addClass('tweedle', el);
+  }
+  
+  var ids = ['DEE', 'DUM'];
+  var elements = map(document.getElementById.bind(document), ids);
+  elements = map(addTweedleClass, elements);
+  console.log(elements);
+</script>
+
+</body>
+</html>

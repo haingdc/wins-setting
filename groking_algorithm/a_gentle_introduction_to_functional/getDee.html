@@ -1,0 +1,24 @@
+ <html>
+<head>
+<style>
+#myHeader {
+    color: red;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="DEE">W3Schools is the best!</h1>
+<h1 id="DUM">W3Schools is the best!</h1>
+<script>
+  var getDee = document.getElementById.bind(document, 'DEE');
+  getDee();
+  console.log(getDee());
+  
+  var getDeeFail = document.getElementById.bind('DEE');
+  console.log(getDeeFail());  // gặp lỗi TypeError
+</script>
+
+</body>
+</html>
